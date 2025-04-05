@@ -18,6 +18,6 @@ void init_list(intrusive_list_t* list);
 void add_node(intrusive_list_t* list, intrusive_node_t* node);
 void remove_node(intrusive_node_t* node);
 
-int get_length(intrusive_list_t* list);
+void apply(intrusive_list_t *list, void (*op)(intrusive_node_t *node, void *data), void *data);
 
 #endif
